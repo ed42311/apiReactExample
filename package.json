@@ -11,6 +11,8 @@
   "scripts": {
     "all:clean": "find . -name 'dist' -type d -prune -print -exec rm -rf '{}' \\;",
     "all:reset": "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \\;",
+    "all:lint": "yarn workspaces run lint",
+    "all:format": "yarn workspaces run format",
     "api:express:start": "yarn workspace api-express start",
     "client:start": "yarn workspace client start",
     "start": "run-p api:express:start client:start"
